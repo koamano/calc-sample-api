@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: nginx-ingress
   annotations:
-    nginx.org/rewrites: "serviceName=tea-svc rewrite=/;"
+    nginx.org/rewrites: "serviceName=myapp-api-service rewrite=/;"
 spec:
   ingressClassName: nginx
   rules:
