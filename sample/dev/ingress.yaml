@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: nginx-ingress
 spec:
-  # ingressClassName: nginx
+  ingressClassName: nginx
   rules:
   - host : appsample.kamanoaws.com
     http:
