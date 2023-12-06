@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  # ingressClassName: nginx
+  rules:
+  - host : appsample.kamanoaws.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-api-service
+            port:
+              number: 80
+      # - path: /api/?(.*)
+      #   backend:
+      #     serviceName: k8-training-api
+      #     servicePort: 80
